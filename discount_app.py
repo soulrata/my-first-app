@@ -2,7 +2,7 @@ import streamlit as ng
 ng.title("โปรแกรมคำนวณส่วนลดสินค้าและ VAT 7%")
 prince = ng.number_input("ราคาเต็มของสินค้า (บาท)", min_value=0.0)
 coolpong = ng.number_input("เปอร์เซ็นต์ส่วนลด (%)", min_value=0.0, max_value=100.0)
-if st.button("คำนวณ"):
+if ng.button("คำนวณ"):
     discount = prince * coolpong / 100
     vat = (prince - discount) * 0.07
     total = prince - discount + vat
